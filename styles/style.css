@@ -1,0 +1,21 @@
+#purple-text-wrapper {
+    background-color: rebeccapurple;
+}
+
+.purle-text-container  + .purle-text-container {
+    margin-left: 15px;
+}
+
+.purle-text-container {
+    background-color: purple;
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.purle-text-container:hover {
+    background-color: red;
+}
