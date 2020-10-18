@@ -1,0 +1,12 @@
+{
+    "days": [
+        {  
+            "temperature": 36,
+            "status": "fine"
+        },
+        {  
+            "temperature": 25,
+            "status": "good"
+        }
+    ]
+}

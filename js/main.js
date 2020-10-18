@@ -5,7 +5,7 @@ var lastName = 'Kakmubeshetvaime';
 
 var cars = ['Cool car', 'Another car'];
 
-var person = {
+var personObj = {
     firstName: 'Ne go znam',
     lastName: 'Pak ne go znam',
     age: 31,
@@ -81,4 +81,28 @@ console.log(calculatedResult)
 
 newArr.sort();
 console.log(newArr);
+
+if (anotherArr1.includes(6)) {
+    console.log('Yes')
+}
+
+
+const personObj = {
+    firstName: 'Ne go znam',
+    lastName: 'Pak ne go znam',
+    age: 31,
+    address: {
+        street: "nqkyde tam",
+        number: 6
+    },
+    books: [
+        'book 1', 'book 2'
+    ]
+}
+
+console.log(Object.keys(personObj))
+
+if(Object.keys(personObj).includes('age')) console.log('Age too');
+
+console.log(Object.entries(personObj));
 
