@@ -116,17 +116,42 @@
             </div>
         </div>
         <div class="row my-5">
-            <div class="card" style="width: 19rem;">
-                <img class="card-img-top" src="images/flood-5657777_1280.png" alt="Card image cap here">
-                <div class="card-body">
-                  <h5 class="card-title">Image by <a
-                    href="https://pixabay.com/users/gtaranu-16261747/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5657777">gtaranu</a>
-                from <a
-                    href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5657777">Pixabay</a></h5>
-                  <p class="card-text">Hey Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Read more</a>
+            <div class="col-md-4">
+                <div class="card" style="width: 19rem;">
+                    <img class="card-img-top" src="images/flood-5657777_1280.png" alt="Card image cap here">
+                    <div class="card-body">
+                        <h5 class="card-title">Image by <a
+                                href="https://pixabay.com/users/gtaranu-16261747/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5657777">gtaranu</a>
+                            from <a
+                                href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5657777">Pixabay</a>
+                        </h5>
+                        <p class="card-text">Hey Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a id="read-more-button" href="#" class="btn btn-primary">Read more</a>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <div class="col-md-8">
+                <form>
+                    <div class="form-group">
+                        <label for="registration-email">Email address</label>
+                        <input type="email" class="form-control" id="registration-email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="registration-password">Password</label>
+                        <input type="password" class="form-control" id="registration-password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <select id="registration-select" class="custom-select">
+                            <option selected>Open this menu</option>
+                            <option value="1">One</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <button id="registration-submit" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -135,6 +160,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+    <script src="js/dom-example.js"></script>
 </body>
 
 </html>
