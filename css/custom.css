@@ -7176,6 +7176,8 @@ body {
 
 .icon-container {
   flex: 1; }
+  .icon-container span {
+    font-size: 16px; }
 
 .icon-container + .icon-container {
   margin-left: 0.5rem; }
