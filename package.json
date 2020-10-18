@@ -1,0 +1,29 @@
+{
+  "name": "praktikum-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangeorgiev97/praktikum-2020.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ivangeorgiev97/praktikum-2020/issues"
+  },
+  "homepage": "https://github.com/ivangeorgiev97/praktikum-2020#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2"
+  }
+}

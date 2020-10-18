@@ -1,0 +1,7 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "./variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./custom-components";
+
