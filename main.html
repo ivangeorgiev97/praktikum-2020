@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="More examples">
+    <title>Exercises three</title>
+</head>
+
+<body>
+    <!--     <h1 id="first">Hey examples</h1>
+    <h1 class="hey">Second one</h1>
+    <h1>Third one</h1> -->
+    <div>
+        <button id="left" style="display: inline-block;">Left</button>
+        <!-- Better with array instead of ids -->
+        <span id="one" style="display: inline-block; width: 200px; border: 1px solid black;">One</span>
+        <span id="two" style="display: inline-block; width: 200px; border: 1px solid black;">Two</span>
+        <span id="three" style="display: inline-block; width: 200px; border: 1px solid black;">Three</span>
+        <button id="right" style="display: inline-block;">Right</button>
+        <div id="timer"></div>
+        <br>
+        <button id="pause">Pause</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // Better with array of strings with images path
+
+            $("#left").hide();
+            $("#two").hide();
+            $("#three").hide();
+
+            let currentElement = 1;
+            let counter = 0;
+            let paused = false;
+
+            let timer = setInterval(function () {
+                counter++;
+                $("#timer").text(counter);
+            }, 1000)
+
+
+            // It can be random too
+            // randomNumber = Math.floor(Math.random() * 3);
+
+            // dispatchEvent for simulating click but with jQuery we can use trigger after 5 seconds for example we can click next
+
+            $("#right").click(function () {
+                // better check indexes from the array
+                if (currentElement === 1) {
+                    currentElement = 2;
+                    $("#one").hide();
+                    $("#left").show();
+                    $("#two").show();
+                } else if (currentElement === 2) {
+                    currentElement = 3;
+                    $("#two").hide();
+                    $("#right").hide();
+                    $("#three").show();
+                }
+            })
+
+            $("#left").click(function () {
+                // better check indexes from the array here too and change image src with attr
+                if (currentElement === 2) {
+                    currentElement = 1;
+                    $("#two").hide();
+                    $("#left").hide();
+                    $("#one").show();
+                } else if (currentElement === 3) {
+                    currentElement = 2;
+                    $("#three").hide();
+                    $("#right").show();
+                    $("#two").show();
+                }
+            })
+
+            // Random button may be added too
+
+            $("#pause").click(function () {
+                paused = !paused;
+
+                if (paused) {
+                    clearInterval(timer);
+                    $("#left").prop("disabled", true);
+                    $("#right").prop("disabled", true);
+                    $("#pause").text("Continue");
+                }
+                else {
+                    timer = setInterval(function () {
+                        counter++;
+                        $("#timer").text(counter);
+                    }, 1000);
+                    $("#left").prop("disabled", false);
+                    $("#right").prop("disabled", false);
+                    $("#pause").text("Pause");
+                }
+            })
+            /*         $("#first").click(function() {
+                alert("Hey")
+            })
+    
+            $(".hey").click(function() {
+                // $(this).text("Name here")
+                $(this).hide()
+            })
+    
+            $("h1").click(function() {
+                $(this).text("cold")
+            }) */
+        })
+    </script>
+</body>
+
+</html>
